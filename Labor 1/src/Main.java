@@ -54,7 +54,19 @@ public class Main {
 
 
             } else if (op == 2) {
+                int[] v = read_vector();
+                Aufgabe2 obj1 = new Aufgabe2();
+                int a = obj1.minim(v);
+                System.out.println("Smallest number: " + a);
 
+                int a2 = obj1.maxim(v);
+                System.out.println("Biggest number: " + a2);
+
+                int a3 = obj1.max_sum(v);
+                System.out.println("Maximum sum: " + a3);
+
+                int a4 = obj1.min_sum(v);
+                System.out.println("Minimum sum: " + a4);
 
             } else if (op == 3) {
 
