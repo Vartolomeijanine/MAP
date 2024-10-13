@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 public class Main {
     private static int[] read_vector() {
@@ -17,6 +18,14 @@ public class Main {
 
         return vector;
     }
+
+    private static int read_int() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        return number;
+    }
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -69,6 +78,58 @@ public class Main {
                 System.out.println("Minimum sum: " + a4);
 
             } else if (op == 3) {
+                //1
+                int[] n1 = read_vector();
+                int[] n2 = read_vector();
+                Aufgabe3 obj1 = new Aufgabe3();
+                int[] a1 = obj1.sum(n1, n2);
+                System.out.print("The sum is: [");
+                for (int i = 0; i < a1.length; i++) {
+                    System.out.print(a1[i]);
+                    if (i < a1.length - 1) {
+                        System.out.print(", ");
+                    }
+                }
+                System.out.println("]");
+
+                //2
+                int[] n3 = read_vector();
+                int[] n4 = read_vector();
+                int[] a2 = obj1.difference(n3, n4);
+                System.out.print("The difference is: [");
+                for (int i = 0; i < a2.length; i++) {
+                    System.out.print(a2[i]);
+                    if (i < a2.length - 1) {
+                        System.out.print(", ");
+                    }
+                }
+                System.out.println("]");
+
+                //3
+                int[] n5 = read_vector();
+                int n6 = read_int();
+                int[] a3 = obj1.mul(n5, n6);
+                System.out.print("The multiplication is: [");
+                for (int i = 0; i < a3.length; i++) {
+                    System.out.print(a3[i]);
+                    if (i < a3.length - 1) {
+                        System.out.print(", ");
+                    }
+                }
+                System.out.println("]");
+
+                //4
+                int[] n7 = read_vector();
+                int n8 = read_int();
+                int[] a4 = obj1.div(n7, n8);
+                System.out.print("The division is: [");
+                for (int i = 0; i < a4.length; i++) {
+                    System.out.print(a4[i]);
+                    if (i < a4.length - 1) {
+                        System.out.print(", ");
+                    }
+                }
+                System.out.println("]");
 
             } else if (op == 4) {
 
