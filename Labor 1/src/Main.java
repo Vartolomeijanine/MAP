@@ -132,6 +132,33 @@ public class Main {
                 System.out.println("]");
 
             } else if (op == 4) {
+                //1
+                int[] n9 = read_vector();
+                Aufgabe4 obj1 = new Aufgabe4();
+                int a = obj1.cheapest(n9);
+                System.out.println("The cheapest keyboard: " + a);
+
+                //2
+                int[] n10 = read_vector();
+                int[] n11 = read_vector();
+                Aufgabe4 obj2 = new Aufgabe4();
+                int a2 = obj2.most_expensive(n10, n11);
+                System.out.println("The most expensive object: " + a2);
+
+                //3
+                int[] n12 = read_vector();
+                int budget = read_int();
+                Aufgabe4 obj3 = new Aufgabe4();
+                int a3 = obj3.most_expensive_in_budget(n12, budget);
+                System.out.println("The most expensive in budget: " + a3);
+
+                //4
+                int[] n13 = read_vector();
+                int[] n14 = read_vector();
+                int budget2 = read_int();
+                Aufgabe4 obj4 = new Aufgabe4();
+                int a4 = obj4.max_sum_budget(budget2, n13, n14);
+                System.out.println("The max sum budget: " + a4);
 
             } else if (op == 0) {
                 t = false;
