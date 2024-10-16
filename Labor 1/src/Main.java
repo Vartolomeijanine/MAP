@@ -38,13 +38,16 @@ public class Main {
                 int[] v = read_vector();
                 Aufgabe1 obj1 = new Aufgabe1();
                 System.out.printf("Insufficient grades: [");
-                ArrayList<Integer> a = obj1.insufficient(v);
+                ArrayList<Integer> a5 = obj1.rounded_grades(v);
+                ArrayList<Integer> a = obj1.insufficient(a5);
+
                 for (int i = 0; i < a.size(); i++) {
                     if (i == a.size() - 1) {
                         System.out.print(a.get(i));
                     } else System.out.print(a.get(i) + ", ");
                 }
                 System.out.println("]");
+
 
                 float a2 = obj1.arithmeticMean(v);
                 System.out.printf("Arithmetic Mean: %.2f\n", a2);

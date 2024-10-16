@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
 public class Aufgabe1 {
-    public ArrayList<Integer> insufficient(int[] vector){
+    public ArrayList<Integer> insufficient(ArrayList<Integer> vector){
         ArrayList<Integer> arr = new ArrayList<>();
-        for (int i = 0; i < vector.length; i++){
-            if (vector[i] <= 38){
-                arr.add(vector[i]);
+        for (int i = 0; i < vector.size(); i++){
+            if (vector.get(i) <= 38){
+                arr.add(vector.get(i));
             }
         }
         return arr;
